@@ -1,0 +1,27 @@
+.js-float-label-wrapper {
+	position: relative;
+}
+
+.js-float-label-wrapper label {
+	position: absolute;
+	top: 1em; left: 1em;
+	opacity: 0;
+}
+
+.js-float-label-wrapper.focused label,
+.js-float-label-wrapper.populated label {
+	opacity: 1
+}
+
+.js-float-label-wrapper.focused input,
+.js-float-label-wrapper.populated input,
+.js-float-label-wrapper.focused textarea,
+.js-float-label-wrapper.populated textarea {
+	padding-top: 2em;
+}
+
+.js-float-label-wrapper input,
+.js-float-label-wrapper textarea,
+.js-float-label-wrapper label {
+	-webkit-transition:0.2s ease-in-out;
+}

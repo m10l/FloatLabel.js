@@ -1,0 +1,202 @@
+html, input, textarea, h1, h3 {
+	font-weight: 300;
+	font-family: 'Roboto';
+}
+
+body {
+	padding: 2em;
+	text-align: center;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h3 {
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	color: #66f;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 320px;
+}
+
+.attributes {
+	background: #eee;
+	border-top: 1px solid #ddd;
+	font-size: 10px;
+	text-align: center;
+	font-weight: 500;
+	position: absolute;
+	bottom: 0; left: 0;
+	padding: 2em 0;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+/* Form Field Styling */
+
+textarea {
+	resize: vertical;
+}
+
+input,
+textarea {
+	display: block;
+	width: 320px;
+	border: 1px solid #eee;
+	margin: 1em 0;
+	padding: 1em;
+	color: #666;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
+}
+
+label {
+	font-size: 0.75em;
+	color: #666;
+}
+
+input:focus,
+textarea:focus {
+		border: 1px solid #ccc;
+		color: #333;
+
+		-webkit-outline: none;
+		-moz-outline: none;
+		outline: none;
+	}
+
+/* Demo FloatLabel.js Styling */
+
+.js-float-label-wrapper label {
+	font-weight: 500;
+}
+
+.js-float-label-wrapper.focused label,
+.js-float-label-wrapper.populated label {
+	color: #999;
+}
+
+.js-float-label-wrapper.focused.populated label {
+	color: #666;
+}
+
+/* Submit Button */
+
+input[type="submit"]{
+	display: block;
+	width: 320px;
+	border: none;
+	margin: 1em 0;
+	padding: 1em;
+	position: relative;
+	background-color: #6d6;
+	color: #fff;
+
+	background-image: -webkit-radial-gradient( circle, transparent 0%, rgba(0,0,0,0.1) 100% );
+	background-image:    -moz-radial-gradient( circle, transparent 0%, rgba(0,0,0,0.1) 100% );
+	background-image:         radial-gradient( circle, transparent 0%, rgba(0,0,0,0.1) 100% );
+	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+	        border-radius: 0;
+}
+
+input[type="submit"]:hover{
+	background-color: #7e7;
+}
+
+input[type="submit"]:active{
+	background-color: #5c5;
+}
+
+/* ============ */
+/* Modal Window */
+/* ============ */
+
+.blackout {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%; width: 100%;
+	background: rgba(0,0,0,0.8);
+	z-index: 20;
+	cursor: pointer;
+}
+
+.modal {
+	padding: 1em;
+	text-align: center;
+	position: absolute;
+	top: 20%; left: 50%;
+	z-index: 30;
+	height: 25px;
+	width: 300px;
+	margin-left: -150px;
+	color: #fff;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.modal h3 {
+	margin-top: 0;
+}
+
+/* For Small Widths */
+
+@media ( max-width: 390px ){
+
+	body {
+		padding: 0;
+	}
+
+	.wrapper {
+		width: 100%;
+		padding: 1em;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+
+	form input[type="text"],
+	form input[type="submit"],
+	form textarea {
+		width: 100%;
+	}
+
+	.modal {
+		left: 0;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.attributes {
+		position: static;
+		background: none;
+	}
+
+	.github-ribbon {
+		display: none;
+	}
+
+}
