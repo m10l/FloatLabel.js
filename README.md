@@ -5,14 +5,14 @@ A jQuery plugin for floating form labels.
 
 Based on a UI concept by [Matt D. Smith](https://twitter.com/mds).
 
-[Demo available here](http://labs.mikemitchell.co.uk/FloatLabelJS/).
+[FloatLabel.js demo](http://labs.mikemitchell.co.uk/FloatLabelJS/).
 
 Usage
 -----
 
 Add jquery.FloatLabel.css to your websites stylesheets and jquery.FloatLabel.js to your scripts.
 
-* Add jquery.FloatLabel.js to your websites scripts -
+* Add jquery.FloatLabel.js to your scripts. Example -
 
 ```
 <script src="scripts/jquery.js"></script>
@@ -21,7 +21,7 @@ Add jquery.FloatLabel.css to your websites stylesheets and jquery.FloatLabel.js 
 ```
 
 
-* Add jquery.FloatLabel.css to your websites stylesheets - 
+* Add jquery.FloatLabel.css to your stylesheets. Example -
 
 ```
 <link rel="stylesheet" href="styles/normalize.css">
@@ -29,7 +29,7 @@ Add jquery.FloatLabel.css to your websites stylesheets and jquery.FloatLabel.js 
 <link rel="stylesheet" href="styles/main.css">
 ```
 
-* Wrap the fields you wish to effect with your chosen class
+* Wrap the fields you wish to effect with your chosen class. Example -
 
 ```
 <div class="js-float-label-wrapper">
@@ -38,7 +38,7 @@ Add jquery.FloatLabel.css to your websites stylesheets and jquery.FloatLabel.js 
 </div>
 ```
 
-* Initialise FloatLabel.js, passing the plugin your input/label wrapper class
+* Initialise FloatLabel.js, passing the plugin your input/label wrapper class. Example -
 
 ```
 $( '.js-float-label-wrapper' ).FloatLabel();
