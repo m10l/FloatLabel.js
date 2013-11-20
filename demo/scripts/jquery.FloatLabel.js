@@ -6,7 +6,8 @@
 			populatedClass : 'populated',
 			focusedClass : 'focused'
 		},
-			settings = $.extend({}, defaults, options);
+
+		settings = $.extend({}, defaults, options);
 
 		return this.each(function(){
 
@@ -14,13 +15,13 @@
 				label = element.find('label'),
 				input = element.find('textarea, input');
 
-			input.val( label.text() );
+			input.attr( 'placeholder', label.text() );
 
 			input.on( 'focus', function(){
 				element.addClass( settings.focusedClass );
-				
-				if( input.val() === label.text() ){
-					input.val('');
+
+				if( input.attr('placeholder') ){
+					input.removeAttr('placeholder');
 				} else {
 					element.addClass( settings.populatedClass );
 				}
@@ -29,9 +30,9 @@
 
 			input.on( 'blur', function(){
 				element.removeClass( settings.focusedClass );
-				
+
 				if( !input.val() ){
-					input.val( label.text() );
+					input.attr( 'placeholder', label.text() );
 					element.removeClass( settings.populatedClass );
 				}
 
