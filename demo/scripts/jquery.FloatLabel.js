@@ -11,11 +11,14 @@
 
 		return this.each(function(){
 
-			var element = $(this),
-				label = element.find('label'),
-				input = element.find('textarea, input');
+			var element      = $(this),
+				label        = element.find('label'),
+				input        = element.find('textarea, input'),
+				defaultValue = input.attr('value');
 
 			input.attr( 'placeholder', label.text() );
+
+			if( defaultValue ) element.addClass( settings.populatedClass );
 
 			input.on( 'focus', function(){
 				element.addClass( settings.focusedClass );
