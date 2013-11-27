@@ -14,7 +14,11 @@
 				label = element.find('label'),
 				input = element.find('textarea, input');
 
-			input.val( label.text() );
+      if( input.val() == '' ) {
+        input.val( label.text() );
+      } else {
+        element.addClass( settings.populatedClass );
+      }
 
 			input.on( 'focus', function(){
 				element.addClass( settings.focusedClass );
